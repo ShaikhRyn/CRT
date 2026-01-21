@@ -9,7 +9,7 @@
 #Memebership Operators 
 #{in ,not in}
 
-print("j" in "rohan")
+print("j" in "riyan")
 print(100 in [10,20,30])
 
 #identity operators 
