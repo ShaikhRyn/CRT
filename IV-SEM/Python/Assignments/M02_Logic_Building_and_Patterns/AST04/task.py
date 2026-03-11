@@ -1,5 +1,9 @@
 def right_triangle(n: int) -> str:
-    pass
+    result = ""
+    for i in range(1, n+1):
+        result += "*" * i + "\n"
+    return result.strip()
+
 
 if __name__ == "__main__":
     n = int(input())
