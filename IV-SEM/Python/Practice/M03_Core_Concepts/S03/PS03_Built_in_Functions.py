@@ -1,40 +1,63 @@
 '''
-1)Find largest number (using max() function) --> usiing a list
-2) check palindrome (using reversed() & join())  -->  joins a llist of strings into a single string
-3) count even numbers (using filter())  --> filters elementsbased on a conditon 
-4) remove duplicates (suing set())  --> creates a set from a list, which automatically removes duplicates
-5) sum of digits (suing sum())
-6) sort words alphabetically (using sorted())  --> returns a sorted list of the specified iterable
-7) find common elements (using set())
-8) index with value (using enumerate())  --> adds a counter to an iterable and returns it as an enumerate object
-9) pair two lists (using zip())  --> combines multiple iterable elem-wise
-10) find the seconf largtest number (using sorted())  --> returns a sorted list of the specified iterable
+1. Find Largest Number (Using max() function)
+2. Check Palindrome (Using reversed() and join() functions)
+3. Count Even Numbers (Using filter()).
+4. Remove Duplicates (Using set())
+5. Sum of Digits (Using sum())
+6. Sort words alphabetically (Using sorted())
+7. Find common elements (using set())
+8. Index with value (Using enumerate())
+9. Pair two lists (Using zip())
+10. Find Second Largest Number (Using sorted())
 '''
+#1 Finding the largest number in a list using max() function
+arr = [10, 23, 54, 85, 10, 25]
+print("Max of arr:", max(arr))  # Output: 85
 
-
-#1)Find largest number (using max() function) 
-numbers = [10, 20, 5, 15, 30]
-largest = max(numbers)
-print("Largest number:", largest)
-
-
-#2) check palindrome 
-word = "Riyan"
-reversed_word = ''.join(reversed(word))
-if word == reversed_word:
-    print("The word is a palindrome.")
+#2 Using reversed() and join() functions to check if a string is a palindrome
+word = "madam"
+if word == "".join(reversed(word)):
+    print("Palindrome")
 else:
-    print("The word is not a palindrome.")
+    print("Not a palindrome.")
 
+#3 Using filter() function to count even numbers in a list
+arr = [10, 7, 45, 68, 45, 24]
+res = list(filter(lambda x : x % 2 == 0, arr))
+print("Even Count:", res)
 
-#3) count even numbers (using filter()) 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))  
-print("Even numbers:", even_numbers)
+#4 Removing duplicates from a list using set() function
+arr = [1, 2, 4, 3, 2, 1, 4 ,3]
+print("Original Array:", arr)
+print("After removing duplicates:", list(set(arr)))
 
+#5 Sum of digits using sum() function
+arr = [1, 2, 3, 4]
+print("Sum of digits:",sum(arr))
 
-#4) remove duplicates (suing set()) 
-numbers = [1, 2, 3, 4, 5, 2, 3, 1]
-unique_numbers = set(numbers)
-print("Unique numbers:", unique_numbers)
+#6 Alphabetical order of words using sorted() function
+arr = ['A', 'Z', 'C', 'L', 'D', 'B']
+print("Alphabetical Order:", sorted(arr))
 
+#7 Common elements in two lists using set() and intersection() functions
+arr1 = [1, 2, 4, 5, 3]
+arr2 = [2, 3, 6, 7, 5]
+a = set(arr1)
+b = set(arr2)
+print("Common elements:", a.intersection(b))
+
+#8 Enumerate() function to get index and value from a list
+arr = [20, 54, 45, 68, 45, 24]
+for i, val in enumerate(arr):
+    print(f"Index: {i}, Value: {val}")
+
+#9 Pairing two lists using zip() function
+arr1 = ['A', 'B', 'C']
+arr2 = [1, 2, 3]
+paired = list(zip(arr1, arr2))
+print("Paired List:", paired)
+
+#10 Finding the second largest number in a list using sorted() function
+arr = [10, 23, 54, 85, 10, 25]
+sorted_arr = sorted(arr, reverse=True)
+print("Second Largest Number:", sorted_arr[1])
